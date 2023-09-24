@@ -1,4 +1,5 @@
-SET IDENTITY_INSERT Master.Regions ON;
+SET IDENTITY_INSERT Master.Regions ON; 
+--kevin
 INSERT INTO Master.Regions (region_code, region_name)
 VALUES ('1','Asia'),
 ('2','Europa'), 
@@ -60,7 +61,7 @@ INSERT INTO Master.address (addr_id, addr_line1, addr_line2, addr_city, addr_pos
 (3, '123 Moo 4, Tambon San Sai Noi', '456 Muu 5 tambo Sun Sai Sio', 'Chiang Mai', '67890', 'POINT(18.8408 98.9611)', 3),
 (4, '1-1-1 Shibuya', '2-2-2 Naruto', 'Tokyo', '01234', 'POINT(35.6581 139.7414)', 4),
 (5, '10 Unter den Linden', '11 Better Den Brock', 'Berlin', '23456', 'POINT(52.5166 13.3833)', 5),
-(6, '55 Rue du Faubourg Saint-Honoré', NULL, 'Paris', '34567', 'POINT(48.8714 2.3074)', 6),
+(6, '55 Rue du Faubourg Saint-HonorÃ©', NULL, 'Paris', '34567', 'POINT(48.8714 2.3074)', 6),
 (7, '123 Main St', '456 Grenn St', 'Los Angeles', '45678', 'POINT(34.0522 -118.2437)', 7),
 (8, '456 Park Ave', '235 Yellow av', 'New York', '56789', 'POINT(40.7711 -73.9742)', 8),
 (9, '789 King St W', '731 Queens St W', 'Toronto', '67890', 'POINT(43.6468 -79.3933)', 9),
@@ -78,29 +79,29 @@ select * from Master.address
 SET IDENTITY_INSERT Master.category_group ON;
 INSERT INTO Master.category_group (cagro_id, cagro_name, cagro_description, cagro_type, cagro_icon, cagro_icon_url)
 VALUES
-  (1, 'HABITACION', 'Habitaciones para que los huéspedes se alojen', 'category', 'room.png', 'https://example.com/room.png'),
-  (2, 'RESTAURANTE', 'Restaurante en el lugar para que los huéspedes cenen', 'service', 'restaurant.png', 'https://example.com/restaurant.png'),
+  (1, 'HABITACION', 'Habitaciones para que los huÃ©spedes se alojen', 'category', 'room.png', 'https://example.com/room.png'),
+  (2, 'RESTAURANTE', 'Restaurante en el lugar para que los huÃ©spedes cenen', 'service', 'restaurant.png', 'https://example.com/restaurant.png'),
   (3, 'SALA DE REUNIONES', 'Salas para reuniones y eventos', 'facility', 'meeting_room.png', 'https://example.com/meeting_room.png'),
-  (4, 'GYM', 'Centro de fitness para uso de los huéspedes', 'facility', 'gym.png', 'https://example.com/gym.png'),
-  (5, 'AULA', 'Salón de usos múltiples para eventos.', 'facility', 'aula.png', 'https://example.com/aula.png'),
-  (6, 'PISCINA', 'Piscina para el uso de los huéspedes', 'facility', 'swimming_pool.png', 'https://example.com/swimming_pool.png'),
+  (4, 'GYM', 'Centro de fitness para uso de los huÃ©spedes', 'facility', 'gym.png', 'https://example.com/gym.png'),
+  (5, 'AULA', 'SalÃ³n de usos mÃºltiples para eventos.', 'facility', 'aula.png', 'https://example.com/aula.png'),
+  (6, 'PISCINA', 'Piscina para el uso de los huÃ©spedes', 'facility', 'swimming_pool.png', 'https://example.com/swimming_pool.png'),
   (7, 'SALON DE BAILE', 'Salon para eventos y fiestas', 'facility', 'balroom.png', 'https://example.com/balroom.png');
 SET IDENTITY_INSERT Master.category_group OFF;
 --politicas--
 SET IDENTITY_INSERT Master.policy ON;
 INSERT INTO Master.policy (poli_id,poli_name, poli_description)
 VALUES
-('1','Política de check-in anticipado', '
-Política relacionada con solicitudes de check-in anticipado'),
-('2','Política de salida tardía', 'Política relacionada con solicitudes de salida tardía'),
-('3','Política de persona extra', 'Política relacionada con huéspedes adicionales en la habitación.'),
-('4','Política de parqueo', 'Política relacionada con las instalaciones de aparcamiento.'),
-('5','Política de servicio de habitación', 'Política relacionada con solicitudes de servicio de habitaciones'),
-('6', 'Política de Cargos Adicionales', 'Cargos por servicios adicionales'),
-('7', 'Política de Niños', 'Política de alojamiento para niños'),
-('8', 'Política de Cancelación de Eventos ', 'Política de cancelación de eventos especiales'),
-('9', 'Política de Accesibilidad' , 'Accesibilidad para personas con discapacidad'),
-('10', 'Política de Privacidad', 'Política de privacidad y protección de datos');
+('1','PolÃ­tica de check-in anticipado', '
+PolÃ­tica relacionada con solicitudes de check-in anticipado'),
+('2','PolÃ­tica de salida tardÃ­a', 'PolÃ­tica relacionada con solicitudes de salida tardÃ­a'),
+('3','PolÃ­tica de persona extra', 'PolÃ­tica relacionada con huÃ©spedes adicionales en la habitaciÃ³n.'),
+('4','PolÃ­tica de parqueo', 'PolÃ­tica relacionada con las instalaciones de aparcamiento.'),
+('5','PolÃ­tica de servicio de habitaciÃ³n', 'PolÃ­tica relacionada con solicitudes de servicio de habitaciones'),
+('6', 'PolÃ­tica de Cargos Adicionales', 'Cargos por servicios adicionales'),
+('7', 'PolÃ­tica de NiÃ±os', 'PolÃ­tica de alojamiento para niÃ±os'),
+('8', 'PolÃ­tica de CancelaciÃ³n de Eventos ', 'PolÃ­tica de cancelaciÃ³n de eventos especiales'),
+('9', 'PolÃ­tica de Accesibilidad' , 'Accesibilidad para personas con discapacidad'),
+('10', 'PolÃ­tica de Privacidad', 'PolÃ­tica de privacidad y protecciÃ³n de datos');
 
 SET IDENTITY_INSERT Master.policy OFF;
 
@@ -113,7 +114,7 @@ VALUES
   (2, 'Galletas dulces', 25, 'Galletas dulces de chocolate', 'SNACK', 'https://example.com/chocolate.png'),
   (3, 'Servicio de lavado de cabello', 120, 'Lavado profundo de cabello', 'SERVICE', 'https://example.com/head-massage.png'),
   (4, 'Sandwich de pollo', 20, 'Sandwich de pollo vegano', 'SNACK', 'https://example.com/snacks.png'),
-  (5, 'Baño limpio', 50, 'Servicio de baños limpios', 'SERVICE', 'https://example.com/clean-bathroom.png'),
+  (5, 'BaÃ±o limpio', 50, 'Servicio de baÃ±os limpios', 'SERVICE', 'https://example.com/clean-bathroom.png'),
   (6, 'Lavado de automovil', 50, 'lavado de automovil', 'FACILITY', 'https://example.com/light-up-boots.png'),
   (7, 'Desayuno', 75, 'Desayuno completo para 2 personas', 'FOOD', 'https://example.com/breakfast.png'),
   (8, 'Lavanderia', 80, 'Servicio de lavanderia', 'SERVICE', 'https://example.com/laundry.png'),
@@ -129,10 +130,10 @@ SET IDENTITY_INSERT Master.price_items OFF;
 --membresias--
 insert into master.members (memb_name, memb_description)
 values
-('SILVER', 'La Membresía SILVER brinda un 10% de descuento en todos los servicios del hotel'),
-('GOLD', 'La membresía GOLD ofrece un 20% de descuento en todos los servicios del hotel y servicio de late check-out gratuito hasta las 12 del mediodía.'),
-('VIP', 'La membresía VIP ofrece un 30% de descuento en todos los servicios del hotel, late check-out gratuito hasta las 12 del mediodía y acceso a la sala VIP'),
-('WIZARD', 'La membresía WIZARD ofrece un 50% de descuento en todos los servicios del hotel, salida tardía gratuita hasta las 12 del mediodía, acceso a la sala VIP y mejora de habitación gratuita');
+('SILVER', 'La MembresÃ­a SILVER brinda un 10% de descuento en todos los servicios del hotel'),
+('GOLD', 'La membresÃ­a GOLD ofrece un 20% de descuento en todos los servicios del hotel y servicio de late check-out gratuito hasta las 12 del mediodÃ­a.'),
+('VIP', 'La membresÃ­a VIP ofrece un 30% de descuento en todos los servicios del hotel, late check-out gratuito hasta las 12 del mediodÃ­a y acceso a la sala VIP'),
+('WIZARD', 'La membresÃ­a WIZARD ofrece un 50% de descuento en todos los servicios del hotel, salida tardÃ­a gratuita hasta las 12 del mediodÃ­a, acceso a la sala VIP y mejora de habitaciÃ³n gratuita');
 
 --payment.entity
 SET IDENTITY_INSERT Payment.entity ON
@@ -1313,7 +1314,7 @@ SET IDENTITY_INSERT users.user_profiles ON;
 INSERT INTO users.user_profiles (uspro_id, uspro_national_id, uspro_birth_date, uspro_job_title, uspro_marital_status, uspro_gender, uspro_addr_id, uspro_user_id)
 VALUES (1, '123-45-6789', '1980-01-01', 'Gerente', 'S', 'M', 1, 1),
        (2, '234-56-7890', '1985-02-02', 'Desarrollador', 'M', 'F', 2, 2),
-       (3, '345-67-8901', '1990-03-03', 'Diseñador', 'S', 'M', 3, 3),
+       (3, '345-67-8901', '1990-03-03', 'DiseÃ±ador', 'S', 'M', 3, 3),
        (4, '456-78-9012', '1995-04-04', 'Tester', 'M', 'F', 4, 4),
        (5, '567-89-0123', '2000-05-05', 'Analista', 'S', 'M', 5, 5),
        (6, '678-90-1234', '2005-06-06', 'Consultor', 'M', 'F', 6, 6),
@@ -1322,7 +1323,7 @@ VALUES (1, '123-45-6789', '1980-01-01', 'Gerente', 'S', 'M', 1, 1),
        (9, '901-23-4567', '2020-09-09', 'Gerente De Proyecto', 'S', 'M', 9, 9),
        (10, '012-34-5678', '2025-10-10', 'Gerente De Marketing', 'M', 'F', 10, 10),
 	   (11, '123-45-6789', '1985-01-01', 'Ingeniero', 'S', 'M', 11, 11),
-	   (12, '234-56-7890', '1990-01-01', 'Diseñador', 'S', 'F', 12, 12),
+	   (12, '234-56-7890', '1990-01-01', 'DiseÃ±ador', 'S', 'F', 12, 12),
 	   (13, '345-67-8901', '1995-01-01', 'Periodista', 'S', 'M', 13, 13),
 	   (14, '456-78-9012', '1980-01-01', 'Profesor', 'M', 'F', 14, 14),
 	   (15, '567-89-0123', '1985-01-01', 'Escritor', 'S', 'M', 15, 15);
